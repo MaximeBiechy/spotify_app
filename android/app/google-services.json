@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "234669294370",
+    "project_id": "spotify-app-0101",
+    "storage_bucket": "spotify-app-0101.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234669294370:android:6a5e9f0fa5b1f4d3e89b7b",
+        "android_client_info": {
+          "package_name": "com.maxime.spotify_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn-lWL-gtqxpoLbFMpVyRNXBePkZr77BI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
