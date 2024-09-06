@@ -65,7 +65,7 @@ class SignupOrSigninPage extends StatelessWidget {
                         flex: 1,
                         child:
                             BasicAppButton(onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => const SignupPage()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => SignupPage()));
                             }, title: 'Register'),
                       ),
                       const SizedBox(width: 20),
@@ -73,7 +73,7 @@ class SignupOrSigninPage extends StatelessWidget {
                         flex: 1,
                         child: TextButton(
                             onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => const SigninPage()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => SigninPage()));
                             },
                             child: Text(
                               'Sign in',

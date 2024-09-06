@@ -19,7 +19,7 @@ class SigninPage extends StatelessWidget {
           width: 40,
         ),
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -32,10 +32,8 @@ class SigninPage extends StatelessWidget {
             const SizedBox(height: 20),
             BasicAppButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SignupPage()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignupPage()));
                 },
                 title: 'Sign In'),
           ],
@@ -81,7 +79,7 @@ class SigninPage extends StatelessWidget {
           TextButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const SignupPage()));
+                  MaterialPageRoute(builder: (context) => SignupPage()));
             },
             child: const Text('Register Now'),
           ),
