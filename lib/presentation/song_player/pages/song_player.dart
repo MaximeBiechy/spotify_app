@@ -119,7 +119,9 @@ class SongPlayerPage extends StatelessWidget {
                       .songDuration
                       .inSeconds
                       .toDouble(),
-                  onChanged: (value) {}),
+                  onChanged: (value) {
+                    context.read<SongPlayerCubit>().changeSongPosition(value);
+                  }),
               const SizedBox(
                 height: 20,
               ),

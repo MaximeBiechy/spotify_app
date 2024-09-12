@@ -51,4 +51,10 @@ class SongPlayerCubit extends Cubit<SongPlayerState> {
     audioPlayer.dispose();
     return super.close();
   }
+
+  void changeSongPosition(double value) {
+    final position = Duration(seconds: value.toInt());
+    audioPlayer.seek(position);
+    emit(SongPlayerLoaded());
+  }
 }
