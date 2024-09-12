@@ -25,4 +25,9 @@ class SongRepositoryImpl extends SongRepository {
     return sl<SongFirebaseService>().isFavoriteSong(songId);
   }
 
+  @override
+  Future<Either> getUserFavoriteSongs() {
+    return sl<SongFirebaseService>().getUserFavoriteSongs();
+  }
+
 }

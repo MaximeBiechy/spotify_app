@@ -8,8 +8,9 @@ import '../../bloc/favorite_button/favorite_button_state.dart';
 
 class FavoriteButton extends StatelessWidget {
   final SongEntity songEntity;
+  final Function? function;
 
-  const FavoriteButton({super.key, required this.songEntity});
+  const FavoriteButton({super.key, required this.songEntity, this.function});
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +27,14 @@ class FavoriteButton extends StatelessWidget {
                 size: 25,
                 color: AppColors.darkGrey,
               ),
-              onPressed: () {
-                context.read<FavoriteButtonCubit>().favoriteButtonUpdated(songEntity.songId);
+              onPressed: () async {
+                await context
+                    .read<FavoriteButtonCubit>()
+                    .favoriteButtonUpdated(songEntity.songId);
+
+                if (function != null) {
+                  function!();
+                }
               },
             );
           }
@@ -38,7 +45,9 @@ class FavoriteButton extends StatelessWidget {
                   ? const Icon(Icons.favorite)
                   : const Icon(Icons.favorite_outline_outlined),
               onPressed: () {
-                context.read<FavoriteButtonCubit>().favoriteButtonUpdated(songEntity.songId);
+                context
+                    .read<FavoriteButtonCubit>()
+                    .favoriteButtonUpdated(songEntity.songId);
               },
             );
           }
