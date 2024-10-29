@@ -1,7 +1,7 @@
 # spotify_app
 
-Spotify Clone App
-
+Spotify Clone App.
+Project finish.
 ## App Images
 
  <img src="https://github.com/user-attachments/assets/27f1f1dd-2c7f-4ba4-86c5-3ddb8c027360" alt="spotify_get_started_page" width="200px">
